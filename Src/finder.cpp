@@ -3,7 +3,6 @@
 #include <QDebug>
 Finder::Finder(QObject *parent) : QObject(parent)
 {
-    qDebug() << "construct";
     connect(this, SIGNAL(pathChanged(QString)), this, SLOT(updateTargets()));
 }
 void Finder::find(QString path)
@@ -15,7 +14,8 @@ void Finder::find(QString path)
                 m_targets.append(i.absoluteFilePath());
             }
         } else if (i.isDir()) {
-            if (i.fileName() == "." || i.fileName() == "..") continue;
+            if (i.fileName() == "." || i.fileName() == "..")
+                continue;
             find(i.absoluteFilePath());
         }
     }
@@ -29,9 +29,7 @@ void Finder::updateTargets()
     }
     m_targets.clear();
     find(dir.absolutePath());
-    qDebug() <<"targets: " <<  m_targets;
     emit targetsChanged();
-    emit suffixChanged(QString("123"));
 }
 
 void Finder::setPath(QString path)

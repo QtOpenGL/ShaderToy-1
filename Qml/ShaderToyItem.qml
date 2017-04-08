@@ -23,6 +23,12 @@ ShaderEffect {
     property real       iSampleRate: 44100
     property real       iTimeDelta: 100
     property alias hoverEnabled: mouse.hoverEnabled
+    NumberAnimation on iGlobalTime {
+        from: 0
+        to: Math.PI * 2
+        duration: 6914
+        loops: Animation.Infinite;
+    }
     Timer {
         id: timer
         running: true
