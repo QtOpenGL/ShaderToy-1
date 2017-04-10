@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>Qml/main.qml</file>
         <file>Qml/ShaderToyItem.qml</file>
+        <file>Qml/Fps.qml</file>
     </qresource>
 </RCC>

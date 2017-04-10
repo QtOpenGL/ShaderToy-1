@@ -13,7 +13,8 @@ SOURCES += Src/main.cpp \
     Src/finder.cpp
 
 RESOURCES += qml.qrc \
-    shaders.qrc
+    shaders.qrc \
+    image.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =

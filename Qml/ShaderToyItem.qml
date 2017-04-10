@@ -69,9 +69,9 @@ ShaderEffect {
         #extension GL_EXT_shader_texture_lod: enable
         #extension GL_OES_standard_derivatives: enable
 
-        precision highp float;
-        precision highp int;
-        precision medium sampler2D;
+//        precision highp float;
+//        precision highp int;
+//        precision medium sampler2D;
         #endif
 
         #ifdef GL_ES
@@ -102,8 +102,6 @@ ShaderEffect {
     readonly property string defaultPixelShader: "
         void mainImage(out vec4 fragColor, in vec2 fragCoord)
         {}"
-    property string pixelShader: "
-        void mainImage(out vec4 fragColor, in vec2 fragCoord)
-        {}"
+    property string pixelShader: ""
     fragmentShader: forwardString + (pixelShader ? pixelShader : defaultPixelShader) + startCode
 }

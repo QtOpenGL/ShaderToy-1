@@ -4,5 +4,6 @@
         <file>Shader/Ms2SD1/Ms2SD1.glsl</file>
         <file>Shader/Xds3zN/Xds3zN.glsl</file>
         <file>Shader/XsXXDn/XsXXDn.glsl</file>
+        <file>Shader/Wave/wave.glsl</file>
     </qresource>
 </RCC>
