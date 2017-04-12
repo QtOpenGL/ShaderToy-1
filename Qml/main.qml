@@ -38,9 +38,11 @@ ApplicationWindow {
     ComboBox {
         id: comboBox
         model: iModel
-
+        Component.onCompleted: {
+            currentIndex = 0;
+        }
         onCurrentIndexChanged: {
-            reader.source = currentText
+            reader.source = currentText;
         }
     }
     Loader {

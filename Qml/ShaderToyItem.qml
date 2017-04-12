@@ -66,8 +66,8 @@ ShaderEffect {
 
     readonly property string forwardString: "
         #ifndef GL_ES
-        #extension GL_EXT_shader_texture_lod: enable
-        #extension GL_OES_standard_derivatives: enable
+//        #extension GL_EXT_shader_texture_lod: enable
+//        #extension GL_OES_standard_derivatives: enable
 
 //        precision highp float;
 //        precision highp int;
@@ -101,7 +101,9 @@ ShaderEffect {
         }"
     readonly property string defaultPixelShader: "
         void mainImage(out vec4 fragColor, in vec2 fragCoord)
-        {}"
+        {
+            fragColor = vec4(fragCoord, fragCoord.x, fragCoord.y);
+        }"
     property string pixelShader: ""
     fragmentShader: forwardString + (pixelShader ? pixelShader : defaultPixelShader) + startCode
 }
