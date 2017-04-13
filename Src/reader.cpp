@@ -1,6 +1,7 @@
 #include "reader.h"
 #include <QFile>
 #include <QDebug>
+#include <QDir>
 
 Reader::Reader(QObject * parent) :
     QObject(parent)
@@ -17,6 +18,7 @@ QString Reader::result() const
 {
     return m_result;
 }
+
 void Reader::setSource(QString source)
 {
     if (m_source == source)
@@ -33,6 +35,7 @@ void Reader::setResult(QString result)
     m_result = result;
     emit resultChanged(result);
 }
+
 void Reader::updateResult()
 {
     QFile file(m_source);

@@ -17,11 +17,13 @@ public:
 public slots:
     void setSource(QString source);
     void setResult(QString result);
+
 private slots:
     void updateResult();
 signals:
     void sourceChanged(QString source);
     void resultChanged(QString result);
+
 private:
     QString m_source;
     QString m_result;

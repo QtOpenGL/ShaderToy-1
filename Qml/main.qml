@@ -1,4 +1,4 @@
-import QtQuick 2.5
+import QtQuick 2.7
 import QtQuick.Controls 1.4
 import Reader 1.0
 import Finder 1.0
@@ -13,6 +13,52 @@ ApplicationWindow {
         id: toy
         anchors.fill: parent
         pixelShader: reader.result
+
+        iChannel0: ShaderEffectSource{
+            hideSource: true
+            textureMirroring: ShaderEffectSource.NoMirroring
+            sourceItem: Image {
+                property int index: comboBox.currentIndex
+                source: ""
+                onIndexChanged: {
+                    source = "qrc" + finder.absolutePaths[index] + "/iChannel0.png"
+                }
+            }
+        }
+        iChannel1: ShaderEffectSource{
+            hideSource: true
+            textureMirroring: ShaderEffectSource.NoMirroring
+            sourceItem: Image {
+                property int index: comboBox.currentIndex
+                source: ""
+
+                onIndexChanged: {
+                    source = "qrc" + finder.absolutePaths[index] + "/iChannel1.png"
+                }
+            }
+        }
+        iChannel2: ShaderEffectSource{
+            hideSource: true
+            textureMirroring: ShaderEffectSource.NoMirroring
+            sourceItem: Image {
+                property int index: comboBox.currentIndex
+                source: ""
+                onIndexChanged: {
+                    source = "qrc" + finder.absolutePaths[index] + "/iChannel2.png"
+                }
+            }
+        }
+        iChannel3: ShaderEffectSource{
+            hideSource: true
+            textureMirroring: ShaderEffectSource.NoMirroring
+            sourceItem: Image {
+                property int index: comboBox.currentIndex
+                source: ""
+                onIndexChanged: {
+                    source = "qrc" + finder.absolutePaths[index] + "/iChannel3.png"
+                }
+            }
+        }
     }
 
     Reader {

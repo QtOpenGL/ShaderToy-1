@@ -6,6 +6,7 @@
         <file>Shader/XsXXDn/XsXXDn.glsl</file>
         <file>Shader/Warn/Warn.glsl</file>
         <file>Shader/Wave/Wave.glsl</file>
-        <file>Shader/Heart/Heart.glsl</file>
+        <file>Shader/Texture/iChannel0.png</file>
+        <file>Shader/Texture/Texture.glsl</file>
     </qresource>
 </RCC>

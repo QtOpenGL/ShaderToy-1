@@ -8,9 +8,10 @@
 //uniform vec4      iDate;                 // (year, month, day, time in seconds)
 //uniform float     iSampleRate;           // sound sample rate (i.e., 44100)
 
-
+//just show one texture
 // main
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
-    vec2 p = (2.0 * )
+    vec2 coord = vec2(fragCoord.x / iResolution.x, fragCoord.y / iResolution.y);
+    fragColor = texture2D(iChannel0, coord);
 }

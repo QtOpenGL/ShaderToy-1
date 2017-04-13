@@ -12,6 +12,7 @@ void Finder::find(QString path)
         if (i.isFile()) {
             if (i.suffix().toLower() == suffix()) {
                 m_targets.append(i.absoluteFilePath());
+                m_absolutePaths.append(i.absolutePath());
             }
         } else if (i.isDir()) {
             if (i.fileName() == "." || i.fileName() == "..")
@@ -28,6 +29,7 @@ void Finder::updateTargets()
         return ;
     }
     m_targets.clear();
+    m_absolutePaths.clear();
     find(dir.absolutePath());
     emit targetsChanged();
 }
@@ -54,6 +56,11 @@ QString Finder::suffix() const
 {
     return m_suffix;
 }
+
+QStringList Finder::absolutePaths() const
+{
+    return m_absolutePaths;
+}
 void Finder::setSuffix(QString suffix)
 {
     if (m_suffix == suffix)
@@ -70,4 +77,13 @@ void Finder::setTargets(QStringList targets)
 
     m_targets = targets;
     emit targetsChanged();
+}
+
+void Finder::setAbsolutePaths(QStringList absolutePaths)
+{
+    if (m_absolutePaths == absolutePaths)
+        return;
+
+    m_absolutePaths = absolutePaths;
+    emit absolutePathsChanged(absolutePaths);
 }
