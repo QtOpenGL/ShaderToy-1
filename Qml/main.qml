@@ -1,4 +1,4 @@
-import QtQuick 2.7
+import QtQuick 2.5
 import QtQuick.Controls 1.4
 import Reader 1.0
 import Finder 1.0
@@ -16,7 +16,7 @@ ApplicationWindow {
 
         iChannel0: ShaderEffectSource{
             hideSource: true
-            textureMirroring: ShaderEffectSource.NoMirroring
+//            textureMirroring: ShaderEffectSource.NoMirroring
             sourceItem: Image {
                 property int index: comboBox.currentIndex
                 source: ""
@@ -27,7 +27,7 @@ ApplicationWindow {
         }
         iChannel1: ShaderEffectSource{
             hideSource: true
-            textureMirroring: ShaderEffectSource.NoMirroring
+//            textureMirroring: ShaderEffectSource.NoMirroring
             sourceItem: Image {
                 property int index: comboBox.currentIndex
                 source: ""
@@ -39,7 +39,7 @@ ApplicationWindow {
         }
         iChannel2: ShaderEffectSource{
             hideSource: true
-            textureMirroring: ShaderEffectSource.NoMirroring
+//            textureMirroring: ShaderEffectSource.NoMirroring
             sourceItem: Image {
                 property int index: comboBox.currentIndex
                 source: ""
@@ -50,7 +50,7 @@ ApplicationWindow {
         }
         iChannel3: ShaderEffectSource{
             hideSource: true
-            textureMirroring: ShaderEffectSource.NoMirroring
+//            textureMirroring: ShaderEffectSource.NoMirroring
             sourceItem: Image {
                 property int index: comboBox.currentIndex
                 source: ""

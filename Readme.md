@@ -9,11 +9,14 @@
 
 ![](Image/demo3.png)
 
-## 说明
-截图是在老电脑上跑的，所以FPS太低了。
+![](Image/demo4.png)
 
-我做了一个Shader搜索器，会自动搜索指定路径下所有子目录，找到扩展名为glsl的文件并添加到ComboBox的列表中。
-所以只要在Comboox中选择一下，就可以方便地切换不同的Shader。
+## 说明
+
+我做了一个Shader搜索器，会自动搜索指定路径下所有子目录，找到扩展名为glsl的文件并添加到程序的Shader列表中。</br>
+所以只要写一个符合ShaderToy格式的shader，放在指定路径下，然后启动程序，在Comboox中选择一下，就可以方便地切换到对应的Shader。</br>
+ShaderToy支持四个纹理通道，命名为iChannel0..3, 如果要添加纹理，只需要将png格式的纹理图片(使用其它QImage支持的格式，需要修改qml中相应的代码)，</br>命名为"iChannel0.png"或者"iChannel1.png"等，放在glsl文件相同路径下，软件就会自动加载该纹理。
+
 
 ## 关于ShadeToy
 

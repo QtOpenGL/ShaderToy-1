@@ -32,7 +32,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
     backGroundColor = mix(uv.x * color1, uv.y * color2, c1 * c2);
 
     //[0, 1] -> [-1, 1]
-    uv = 2.0 * uv - 1;
+    uv = 2.0 * uv - 1.0;
 //    uv.y += 0.1;
 //    uv.y += (0.07 * sin(uv.x * 10 + iGlobalTime));
     float waveWidth = abs(1.0 / (150.0 * uv.y));
