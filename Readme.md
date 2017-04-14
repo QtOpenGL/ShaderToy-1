@@ -42,7 +42,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 ## qml对shaderoy的封装：
 
 qml 提供了Shaderffect，可以直接使用Shader代码。
-使用Shaderffect对Shaderoy的封装如下：
+使用Shaderffect对Shadertoy的封装如下：
 
 ```
 ShaderEffect {
@@ -64,6 +64,21 @@ ShaderEffect {
     ...
 }
 ```
+
+iChannel 纹理通道，使用方式是通过ShaderEffectSource
+
+```
+iChannel0: ShaderEffectSource{
+            hideSource: true
+            textureMirroring: ShaderEffectSource.NoMirroring
+            sourceItem: Image {
+                source: ""               
+            }
+}
+```
+
+注意ShaderEffectSource，有个属性是textureMirroring,用来描述纹理翻转变换的。默认值是上下翻转。
+我在Qt5.8中把这个属性设置为不翻转就可以正常显示了，但是在Qt5.6的版本中，QtQuick 2.5 提示没有textureMirroring这个属性
 
 ## LinkList
 
